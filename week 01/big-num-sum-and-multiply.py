@@ -10,6 +10,7 @@ def sum(int1,int2):
     first = str(int1)
     second = str(int2)
     summ = ''    
+    sign = '-' (if first[0] == '-' or second[0] == '-' ) and 
     carry = 0
     a = len(first)
     b = len(second)
@@ -55,6 +56,6 @@ def multiply(int1,int2):
              
 if __name__ == "__main__":
     # print(sum(1234567890987654321323423541351451,12345678987654321134143124123513551134))
-    print(multiply(152859965,912301))
+    # print(multiply(152859965,912301))
     
     
