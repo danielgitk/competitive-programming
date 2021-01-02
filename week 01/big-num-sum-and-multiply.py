@@ -60,15 +60,9 @@ def one_negative(first,second):
             print(diff)
         elif (x <  y ):
             diff = str(x+10 - y)   
-            # print(diff)
-            # print(str(int(first[-i-2]) - 1))
-            # print(first)
-            x = first
-            
+            x = first            
             first = x[:-i-2] + str(int(x[-i-2]) - 1) + x[-i-1:]
-            print(first)
-            # print(first)
-            
+            print(first)            
         summ = diff + summ
     return summ
                    
@@ -97,6 +91,6 @@ def multiply(int1,int2):
 if __name__ == "__main__":
     # print(sum(-1234567890987654321323423541351451,-12345678987654321134143124123513551134))
     # print(multiply(152859965,912301))
-    print(sum(1230, -123))
+    print(sum(1000, -123))
     
     
