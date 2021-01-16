@@ -6,7 +6,6 @@ Created on Tue Jan 12 09:28:16 2021
 @author: daniel
 """
 def countingSort(arr):
-    arr = [1,3,4,5,5,2,9]
     maxi = max(arr) + 1
     counter_arr = [0]*maxi
     n = len(arr)
