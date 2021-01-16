@@ -13,15 +13,17 @@ import sys
 
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
-    num = 0
-    for i in range(len(ar)):
-        if ar:
-            x = ar.pop()
-        
-        if x in ar:
-            num = num + 1
-            ar.remove(x)
-    return num       
+    dicti = {}   
+    for i in ar:
+        if i not in dicti:
+            dicti[i] = 1
+        elif i in dicti:
+            dicti[i] += 1
+    matching_socks = 0
+    for x in dicti:
+        matching_socks += dicti[x]//2
+    return matching_socks
+   
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
