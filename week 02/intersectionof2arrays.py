@@ -13,9 +13,8 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        z = set()
-        nums1 = set(nums1)     
-        for x in nums1:
-            if x in nums2:
-                z.add(x)
-        return z
+
+        nums1 = set(nums1)    
+        nums2 = set(nums2)
+   
+        return nums1.intersection(nums2)

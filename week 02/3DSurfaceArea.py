@@ -21,18 +21,18 @@ def bound(x, y ,  mat):
 def surfaceArea(A):
     
 
-    x,y = len(A),len(A[0])
+    lenofA,lenofB = len(A),len(A[0])
     area = 0
     moves = [[0,1],[1,0],[-1,0],[0,-1]]
-    for i in range(x):
-        for j in range(y):
+    for i in range(lenofA):
+        for j in range(lenofB):
             for k,l in moves:
                 cArea = A[i][j]
                 e,f = k + i,l+ j
                 area += max(0,cArea - A[e][f]) if bound(e,f,A) else cArea 
                 
-    TxB  = x * y * 2
-    return  TxB + area
+    TopandBottom  = lenofA * lenofB * 2
+    return  TopandBottom + area
     
     
 if __name__ == '__main__':

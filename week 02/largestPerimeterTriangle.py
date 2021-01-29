@@ -7,8 +7,8 @@ Created on Mon Jan 11 18:11:30 2021
 """
 
 class Solution(object):
-    def isPossible(self,x,y,z):
-        if x + y > z and x + z > y and y + z > x:
+    def isPossible(self,side1,side2,side3):
+        if side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:
             return True
         else:
             return False

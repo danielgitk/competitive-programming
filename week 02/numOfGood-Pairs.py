@@ -12,9 +12,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        data = {}
         isGood = 0
-        for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                if nums[i] == nums[j]:
-                    isGood += 1
+        for i in nums:
+            if i in data:
+                isGood += data[i]
+                data[i] += 1                
+            else:
+                data[i] = 1
         return isGood

@@ -13,7 +13,21 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        
-        s = sorted(list(s))
-        t = sorted(list(t))
-        return s == t
+        dicti = {}        
+        for i in s:
+            if i in dicti:
+                dicti[i] += 1
+            else:
+                dicti[i] = 1
+        for j in t:
+            if j not in dicti:
+                return False
+            else:
+                if dicti[j] != 0:
+                    dicti[j] -= 1
+                else:
+                    return False                
+        for i,j in dicti.items():
+            if j != 0:
+                return False
+        return True
