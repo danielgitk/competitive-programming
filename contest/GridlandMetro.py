@@ -1,3 +1,6 @@
+4 4 3
+2 2 3
+3 1 4
 #!/bin/python3
 
 import math
@@ -8,8 +11,8 @@ import sys
 
 # Complete the gridlandMetro function below.
 def gridlandMetro(n, m, k, track):
+    track.sort()
     free = n * m
-    extras = 0
     dicti  = {}    
     for row, start,finish in track:
         start,finish = (start,finish) if start <= finish else (finish,start)
@@ -22,13 +25,13 @@ def gridlandMetro(n, m, k, track):
                 print(rows)
                 start1,finish1 = dicti[row][i]
                 if start > finish1 or finish < start1:
+                    # free -= finish - start +  1
                     continue
                 else:
                     start1 = start if start <= start1 else start1
                     finish1 = finish if finish >= finish1 else finish1
                     dicti[row][i] = [start1,finish1] 
                     found = 1
-                    break
             if not found:
                 dicti[row].append([start,finish])
                 print(dicti)
