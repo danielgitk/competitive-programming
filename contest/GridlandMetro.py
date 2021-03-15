@@ -28,6 +28,7 @@ def gridlandMetro(n, m, k, track):
                     finish1 = finish if finish >= finish1 else finish1
                     dicti[row][i] = [start1,finish1] 
                     found = 1
+                    break
             if not found:
                 dicti[row].append([start,finish])
                 print(dicti)
